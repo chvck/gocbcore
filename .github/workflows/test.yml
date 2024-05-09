@@ -56,4 +56,4 @@ jobs:
         run: go get
       - name: Run tests
         timeout-minutes: 40
-        run: go test ./... -v -race --connstr ${{ CBDC_CONNSTR }} --user Administrator --pass password --cluster-version ${{ matrix.server }}
+        run: go test ./... -v -race --connstr ${{ env.CBDC_CONNSTR }} --user Administrator --pass password --cluster-version ${{ matrix.server }}
